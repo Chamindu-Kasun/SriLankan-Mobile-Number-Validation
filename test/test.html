@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>NIC_Test | Users</title>
+        <script defer src="testScript.js"></script>
+        <link rel="stylesheet" href="testStyles.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div id="frame" style="display: flex; flex-direction: column;">
+            <div style="display: flex; flex-direction: row;">
+                <div style="display: flex; flex-direction: column; width: 800px; margin-left: auto; margin-right: auto;" class="input-group mb-3">
+                    <form id="form" action="/test/test.html" method="GET" style="width: 500px;">
+                        <div id="form-group" class="form-group">
+                            <label for="formGroupExampleInput">Valid Mobile</label>
+                            <input type="string" class="form-control" id="Mobile1" value="0764629040">
+                        </div>
+                        <div id="form-group" class="form-group">
+                            <input type="string" class="form-control" id="Mobile2" value="774629040">
+                        </div>
+                        <div id="form-group" class="form-group">
+                            <input type="string" class="form-control" id="Mobile3" value="94764629040">
+                        </div>
+                        <div id="form-group" class="form-group">
+                            <input type="string" class="form-control" id="Mobile4" value="+94764629040">
+                        </div>
+                        <div id="form-group" class="form-group">
+                            <input type="string" class="form-control" id="Mobile5" value="(076)-46.29 (04.0)">
+                        </div>
+                        <div id="form-group" class="form-group">
+                            <label for="formGroupExampleInput2">Invalid Mobile Number</label>
+                            <input type="string" class="form-control" id="Mobile6" value="0774567345165353">
+                        </div>
+                        <div id="form-group" class="form-group">
+                            <input type="string" class="form-control" id="Mobile7" value="0794629040">
+                        </div>
+                        <div id="form-group" class="form-group">
+                            <label for="formGroupExampleInput2">Valid Fixed</label>
+                            <input type="string" class="form-control" id="Mobile8" value="813815351">
+                        </div>
+                        <div id="form-group" class="form-group">
+                            <input type="string" class="form-control" id="Mobile9" value="0813815351">
+                        </div>
+                        <div id="form-group" class="form-group">
+                            <input type="string" class="form-control" id="Mobile10" value="94813815351">
+                        </div>
+                        <div id="form-group" class="form-group">
+                            <input type="string" class="form-control" id="Mobile11" value="+94813815351">
+                        </div>
+                        <div id="form-group" class="form-group">
+                            <input type="string" class="form-control" id="Mobile12" value="+(94)-381. 53. (51)">
+                        </div>
+                        <div id="form-group" class="form-group">
+                            <label for="formGroupExampleInput2">Invalid Fixed Number</label>
+                            <input type="string" class="form-control" id="Mobile13" value="0814563123676">
+                        </div>
+                        <div id="form-group" class="form-group">
+                            <label for="formGroupExampleInput2">Invalid Area Code</label>
+                            <input type="string" class="form-control" id="Mobile14" value="0823815351">
+                        </div>
+                        <div id="form-group" class="form-group">
+                            <label for="formGroupExampleInput2">Invalid Service Provider</label>
+                            <input type="string" class="form-control" id="Mobile15" value="0826815351">
+                        </div>
+                        <div id="form-group" class="form-group">
+                            <label for="formGroupExampleInput2">Invalid Country Code</label>
+                            <input type="string" class="form-control" id="Mobile16" value="+91813815351">
+                        </div>
+                        <div id="form-group" class="form-group">
+                            <label for="formGroupExampleInput2">Invalid Characters</label>
+                            <input type="string" class="form-control" id="Mobile17" value="081ABCD671">
+                        </div>
+                        <input type="submit" class="btn btn-outline-danger" value='Test Numbers' style="margin-top: 20px; margin-right: 5%; width: 200px;"></input> 
+                    </form>
+                </div>
+                <div style="display: flex; flex-direction: column; width: 800px; margin-left: 0px; " class="input-group mb-3">
+                    <div id="frame">
+                        <div class="row">
+                            <div id="text" style="font-weight: 700;">Validity : </div>
+                            <div id="validity1"></div>
+                        </div>
+                        <div class="row">
+                            <div id="text" style="font-weight: 700;">Number :  </div>
+                            <div id="number1"></div>
+                        </div>
+                        <div class="row">
+                            <div id="text" style="font-weight: 700;">Type: </div>
+                            <div id="type1"></div>
+                        </div>
+                        <div class="row">
+                            <div id="text" style="font-weight: 700;">Service Provider : </div>
+                            <div id="provider1"></div>
+                        </div>
+                    </div>
+                    <div id="line"></div>
+                    <div id="frame">
+                        <div class="row">
+                            <div id="text" style="font-weight: 700;">Validity : </div>
+                            <div id="validity2"></div>
+                        </div>
+                        <div class="row">
+                            <div id="text" style="font-weight: 700;">Number :  </div>
+                            <div id="number2"></div>
+                        </div>
+                        <div class="row">
+                            <div id="text" style="font-weight: 700;">Type: </div>
+                            <div id="type2"></div>
+                        </div>
+                        <div class="row">
+                            <div id="text" style="font-weight: 700;">Service Provider : </div>
+                            <div id="provider2"></div>
+                        </div>
+                    </div>
+                    <div id="line"></div>
+                    <div id="frame">
+                        <div class="row">
+                            <div id="text" style="font-weight: 700;">Validity : </div>
+                            <div id="validity3"></div>
+                        </div>
+                        <div class="row">
+                            <div id="text" style="font-weight: 700;">Number :  </div>
+                            <div id="number3"></div>
+                        </div>
+                        <div class="row">
+                            <div id="text" style="font-weight: 700;">Type: </div>
+                            <div id="type3"></div>
+                        </div>
+                        <div class="row">
+                            <div id="text" style="font-weight: 700;">Service Provider : </div>
+                            <div id="provider3"></div>
+                        </div>
+                    </div>
+                    <div id="line"></div>
+                    <div id="frame">
+                        <div class="row">
+                            <div id="text" style="font-weight: 700;">Validity : </div>
+                            <div id="validity4"></div>
+                        </div>
+                        <div class="row">
+                            <div id="text" style="font-weight: 700;">Number :  </div>
+                            <div id="number4"></div>
+                        </div>
+                        <div class="row">
+                            <div id="text" style="font-weight: 700;">Type: </div>
+                            <div id="type4"></div>
+                        </div>
+                        <div class="row">
+                            <div id="text" style="font-weight: 700;">Service Provider : </div>
+                            <div id="provider4"></div>
+                        </div>
+                    </div>
+                    <div id="line"></div>
+                    <div id="frame">
+                        <div class="row">
+                            <div id="text" style="font-weight: 700;">Validity : </div>
+                            <div id="validity5"></div>
+                        </div>
+                        <div class="row">
+                            <div id="text" style="font-weight: 700;">Number :  </div>
+                            <div id="number5"></div>
+                        </div>
+                        <div class="row">
+                            <div id="text" style="font-weight: 700;">Type: </div>
+                            <div id="type5"></div>
+                        </div>
+                        <div class="row">
+                            <div id="text" style="font-weight: 700;">Service Provider : </div>
+                            <div id="provider5"></div>
+                        </div>
+                    </div>
+                    <div id="line"></div>
+                    <div id="frame">
+                        <div class="row">
+                            <div id="text" style="font-weight: 700;">Validity : </div>
+                            <div id="validity6"></div>
+                        </div>
+                        <div class="row">
+                            <div id="text" style="font-weight: 700;">Number :  </div>
+                            <div id="number6"></div>
+                        </div>
+                        <div class="row">
+                            <div id="text" style="font-weight: 700;">Type: </div>
+                            <div id="type6"></div>
+                        </div>
+                        <div class="row">
+                            <div id="text" style="font-weight: 700;">Service Provider : </div>
+                            <div id="provider6"></div>
+                        </div>
+                    </div>
+                    <div id="line"></div>
+                    <div id="frame">
+                        <div class="row">
+                            <div id="text" style="font-weight: 700;">Validity : </div>
+                            <div id="validity7"></div>
+                        </div>
+                        <div class="row">
+                            <div id="text" style="font-weight: 700;">Number :  </div>
+                            <div id="number7"></div>
+                        </div>
+                        <div class="row">
+                            <div id="text" style="font-weight: 700;">Type: </div>
+                            <div id="type7"></div>
+                        </div>
+                        <div class="row">
+                            <div id="text" style="font-weight: 700;">Service Provider : </div>
+                            <div id="provider7"></div>
+                        </div>
+                    </div>
+                    <div id="line"></div>
+                    <div id="frame">
+                        <div class="row">
+                            <div id="text" style="font-weight: 700;">Validity : </div>
+                            <div id="validity8"></div>
+                        </div>
+                        <div class="row">
+                            <div id="text" style="font-weight: 700;">Number :  </div>
+                            <div id="number8"></div>
+                        </div>
+                        <div class="row">
+                            <div id="text" style="font-weight: 700;">Type: </div>
+                            <div id="type8"></div>
+                        </div>
+                        <div class="row">
+                            <div id="text" style="font-weight: 700;">Service Provider : </div>
+                            <div id="provider8"></div>
+                        </div>
+                    </div>
+                    <div id="line"></div>
+                    <div id="frame">
+                        <div class="row">
+                            <div id="text" style="font-weight: 700;">Validity : </div>
+                            <div id="validity9"></div>
+                        </div>
+                        <div class="row">
+                            <div id="text" style="font-weight: 700;">Number :  </div>
+                            <div id="number9"></div>
+                        </div>
+                        <div class="row">
+                            <div id="text" style="font-weight: 700;">Type: </div>
+                            <div id="type9"></div>
+                        </div>
+                        <div class="row">
+                            <div id="text" style="font-weight: 700;">Service Provider : </div>
+                            <div id="provider9"></div>
+                        </div>
+                    </div>
+                    <div id="line"></div>
+                    <div id="frame">
+                        <div class="row">
+                            <div id="text" style="font-weight: 700;">Validity : </div>
+                            <div id="validity10"></div>
+                        </div>
+                        <div class="row">
+                            <div id="text" style="font-weight: 700;">Number :  </div>
+                            <div id="number10"></div>
+                        </div>
+                        <div class="row">
+                            <div id="text" style="font-weight: 700;">Type: </div>
+                            <div id="type10"></div>
+                        </div>
+                        <div class="row">
+                            <div id="text" style="font-weight: 700;">Service Provider : </div>
+                            <div id="provider10"></div>
+                        </div>
+                    </div>
+                    <div id="line"></div>
+                    <div id="frame">
+                        <div class="row">
+                            <div id="text" style="font-weight: 700;">Validity : </div>
+                            <div id="validity11"></div>
+                        </div>
+                        <div class="row">
+                            <div id="text" style="font-weight: 700;">Number :  </div>
+                            <div id="number11"></div>
+                        </div>
+                        <div class="row">
+                            <div id="text" style="font-weight: 700;">Type: </div>
+                            <div id="type11"></div>
+                        </div>
+                        <div class="row">
+                            <div id="text" style="font-weight: 700;">Service Provider : </div>
+                            <div id="provider11"></div>
+                        </div>
+                    </div>
+                    <div id="line"></div>
+                    <div id="frame">
+                        <div class="row">
+                            <div id="text" style="font-weight: 700;">Validity : </div>
+                            <div id="validity12"></div>
+                        </div>
+                        <div class="row">
+                            <div id="text" style="font-weight: 700;">Number :  </div>
+                            <div id="number12"></div>
+                        </div>
+                        <div class="row">
+                            <div id="text" style="font-weight: 700;">Type: </div>
+                            <div id="type12"></div>
+                        </div>
+                        <div class="row">
+                            <div id="text" style="font-weight: 700;">Service Provider : </div>
+                            <div id="provider12"></div>
+                        </div>
+                    </div>
+                    <div id="line"></div>
+                    <div id="frame">
+                        <div class="row">
+                            <div id="text" style="font-weight: 700;">Validity : </div>
+                            <div id="validity13"></div>
+                        </div>
+                        <div class="row">
+                            <div id="text" style="font-weight: 700;">Number :  </div>
+                            <div id="number13"></div>
+                        </div>
+                        <div class="row">
+                            <div id="text" style="font-weight: 700;">Type: </div>
+                            <div id="type13"></div>
+                        </div>
+                        <div class="row">
+                            <div id="text" style="font-weight: 700;">Service Provider : </div>
+                            <div id="provider13"></div>
+                        </div>
+                    </div>
+                    <div id="line"></div>
+                    <div id="frame">
+                        <div class="row">
+                            <div id="text" style="font-weight: 700;">Validity : </div>
+                            <div id="validity14"></div>
+                        </div>
+                        <div class="row">
+                            <div id="text" style="font-weight: 700;">Number :  </div>
+                            <div id="number14"></div>
+                        </div>
+                        <div class="row">
+                            <div id="text" style="font-weight: 700;">Type: </div>
+                            <div id="type14"></div>
+                        </div>
+                        <div class="row">
+                            <div id="text" style="font-weight: 700;">Service Provider : </div>
+                            <div id="provider14"></div>
+                        </div>
+                    </div>
+                    <div id="line"></div>
+                    <div id="frame">
+                        <div class="row">
+                            <div id="text" style="font-weight: 700;">Validity : </div>
+                            <div id="validity15"></div>
+                        </div>
+                        <div class="row">
+                            <div id="text" style="font-weight: 700;">Number :  </div>
+                            <div id="number15"></div>
+                        </div>
+                        <div class="row">
+                            <div id="text" style="font-weight: 700;">Type: </div>
+                            <div id="type15"></div>
+                        </div>
+                        <div class="row">
+                            <div id="text" style="font-weight: 700;">Service Provider : </div>
+                            <div id="provider15"></div>
+                        </div>
+                    </div>
+                    <div id="line"></div>
+                    <div id="frame">
+                        <div class="row">
+                            <div id="text" style="font-weight: 700;">Validity : </div>
+                            <div id="validity16"></div>
+                        </div>
+                        <div class="row">
+                            <div id="text" style="font-weight: 700;">Number :  </div>
+                            <div id="number16"></div>
+                        </div>
+                        <div class="row">
+                            <div id="text" style="font-weight: 700;">Type: </div>
+                            <div id="type16"></div>
+                        </div>
+                        <div class="row">
+                            <div id="text" style="font-weight: 700;">Service Provider : </div>
+                            <div id="provider16"></div>
+                        </div>
+                    </div>
+                    <div id="line"></div>
+                    <div id="frame">
+                        <div class="row">
+                            <div id="text" style="font-weight: 700;">Validity : </div>
+                            <div id="validity17"></div>
+                        </div>
+                        <div class="row">
+                            <div id="text" style="font-weight: 700;">Number :  </div>
+                            <div id="number17"></div>
+                        </div>
+                        <div class="row">
+                            <div id="text" style="font-weight: 700;">Type: </div>
+                            <div id="type17"></div>
+                        </div>
+                        <div class="row">
+                            <div id="text" style="font-weight: 700;">Service Provider : </div>
+                            <div id="provider17"></div>
+                        </div>
+                    </div>
+                    <div id="line"></div>
+                    
+                </div>
+            </div>    
+    </div>
+</body>
+</html>
